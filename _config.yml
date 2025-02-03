@@ -2,14 +2,14 @@
 markdown: kramdown
 
 # URL of the Site
-url: 'https://arch-cordero.github.io'
+url: ''
 # Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl: arch-cordero.github.io
+baseurl: 
 
 # Title of the Site
 title: Arch Fernando Cristobal Cordero
 # Description of the Site
-description: Arch Fernando Cristobal Cordero's website
+description: Arch Fernando Cristobal Cordero website
 # URL of Image of the Site
 site-image: /WhatATheme/assets/images/meta.jpg
 # Keywords of the Site
