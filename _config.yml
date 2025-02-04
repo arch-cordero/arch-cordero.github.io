@@ -7,13 +7,13 @@ url: ''
 baseurl: 
 
 # Title of the Site
-title: Arch Fernando Cristobal Cordero
+title: Fernando Cristobal Cordero
 # Description of the Site
-description: Arch Fernando Cristobal Cordero website
+description: Architetto e designer
 # URL of Image of the Site
-site-image: /WhatATheme/assets/images/meta.jpg
+site-image: /arch-cordero/assets/images/meta.jpg
 # Keywords of the Site
-site-keywords: Site, Template, Theme
+site-keywords: Architetto, Fernando Cristobal Cordero, Design, Curriculum Vitae
 # URL for the Image of custom Favicon
 favicon-url: 
 
@@ -23,31 +23,21 @@ heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto
 # Social Media and Contact
 # If you don't want to use any icon, you can leave them blank.
 email: arch.cordero@gmail.com
-facebook_username: /
-twitter_username: /
-instagram_username: /
 linkedin_username: fernandocristobalcordero
 github_username:  arch-cordero
-youtube_channel_id: UCk_93NXYP-U_AOB5GfWlOow
-reddit_username: /
-behance_username: /
-dribbble_username: /
-spotify_username: /
+behance_username: studiogargano51
 
 # Google Analytics
 google-analytics: /
 
-# Disqus
-disqus-shortname: /
-
 # Name of the Author
-author-name: Arch Fernando Cristobal Cordero
+author-name: Architetto Fernando Cristobal Cordero
 # URL for the Image of the Author
 author-image: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
 # 60 Words About the Author
-author-about: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget pharetra velit, dapibus bibendum ex. Maecenas vitae laoreet mauris, ac luctus metus. Aliquam luctus velit vel ipsum feugiat, vel venenatis mauris hendrerit. Sed at vulputate sapien, eget vehicula dolor. Aliquam volutpat pulvinar neque sit amet sodales.
+author-about: "Fernando Cristobal Cordero è specializzato in progetti architettonici, urbanistica, servizi tecnici, gestionali e ambientali. Collabora con un team di professionisti altamente qualificati, utilizzando le più moderne tecnologie. È in grado di sviluppare e realizzare progetti, dal concept fino al completamento, seguendo gli standard di settore e ponendo particolare attenzione al raggiungimento della sostenibilità. Vanta molti anni di esperienza nella gestione e nell'elaborazione di cartografia informatizzata, studi di fattibilità, ricerche e rilievi del territorio, progettazione edilizia, costruzione e pianificazione stradale, oltre alla pianificazione ambientale e paesaggistica con tutti i dettagli necessari. Si avvale di un team completo di professionisti, che comprende architetti, ingegneri civili, ingegneri strutturali, ingegneri impiantisti, ingegneri ambientali, biologi, esperti in gestione contabile e economisti. Gestisce il project management e coordina tutte le attività, dalla pianificazione all'approvazione e valutazione, dalla supervisione dei lavori fino alla realizzazione del design d’interni. Opera principalmente nei settori residenziale, commerciale, educativo, del restauro, dell’urbanistica, nonché nei settori artistico e del tempo libero."
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
-author-url: https://github.com/thedevslot
+author-url: https://github.com/arch-cordero
 
 # SASS
 sass:
