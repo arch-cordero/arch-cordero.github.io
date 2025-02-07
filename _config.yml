@@ -52,6 +52,8 @@ plugins:
 # Permalink
 permalink: "blog/:title"
 
+date_locale: it
+
 # Compress
 compress_html:
   clippings: all
