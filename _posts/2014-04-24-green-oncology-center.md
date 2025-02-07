@@ -19,7 +19,9 @@ Questo modello è stato concepito seguendo i sette punti strategici indicati dal
 * sostenibilità alimentare;
 * gestione dei rifiuti;
 * gestione dell'acqua.
+
 La sostenibilità del GOC si manifesta non solo nell'efficienza di utilizzo, nel recupero e nel riciclaggio di risorse ma anche nella sostenibilità delle cure. Affianco allilluminazione a basso consumo, all'utilizzo di fotovoltaico e cogenerazione, all'impiego di filtri e isolamento termico, alla gestione mirata dei rifiuti, all'uso di materiali eco-compatibili, alla gestione e amministrazione dell'utilizzo dell'acqua si colloca come elemento fondamentale la progettazione di un microambiente ospedaliero che renda le cure e il recupero della salute più efficiente. Numerose attività creative sono previste all'interno del GOC (teatro, giochi, yoga, attività artistiche, musica, orti urbani)con l'obiettivo di stimolare la fiducia in sé stessi e generare un atteggiamento positivo sia del paziente che dei suoi famigliari.
+
 ---
 
 ### GALLERIA IMMAGINI
