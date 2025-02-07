@@ -50,7 +50,7 @@ plugins:
   - jekyll-feed
 
 # Permalink
-permalink: "blog/:title"
+permalink: "project/:title"
 
 date_locale: "it"
 default_locale: "it"
