@@ -52,7 +52,8 @@ plugins:
 # Permalink
 permalink: "blog/:title"
 
-date_locale: it
+date_locale: "it"
+default_locale: "it"
 
 # Compress
 compress_html:
