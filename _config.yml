@@ -24,7 +24,7 @@ heroimage: https://arch-cordero.github.io/assets/images/hero.jpg
 # If you don't want to use any icon, you can leave them blank.
 email: arch.cordero@gmail.com
 linkedin_username: fernandocristobalcordero
-github_username:  arch-cordero
+github_username: arch-cordero
 behance_username: studiogargano51
 
 # Google Analytics
@@ -50,7 +50,7 @@ plugins:
   - jekyll-feed
 
 # Permalink
-permalink: "project/:title"
+permalink: "projects/:title"
 
 date_locale: "it"
 default_locale: "it"
