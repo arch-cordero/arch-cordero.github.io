@@ -1,7 +1,7 @@
 ---
 title: "BEACH VILLA AT RAS LAFFAN - QATAR"
 layout: post
-post-image: "/assets/images/projects/ras-laffan-villa/Sea\ front\ per\ copertina.jpg"
+post-image: "/assets/images/projects/ras-laffan-villa/Sea_front_per_copertina.jpg"
 description: "THIS ITS AN INTERIOR AND EXTERIOR DESIGN PROJECT MADE FOR A LUXURY BEACH VILLA AT RAS LAFFAN IN QATAR."
 tags:
   - qatar
@@ -15,6 +15,7 @@ THIS ITS AN INTERIOR AND EXTERIOR DESIGN PROJECT MADE FOR A LUXURY BEACH VILLA A
 ---
 
 ### GALLERIA IMMAGINI
+
 ![Immagine 1](/assets/images/projects/ras-laffan-villa/Bathroom beige.jpg)
 ![Immagine 2](/assets/images/projects/ras-laffan-villa/Bathroom green.jpg)
 ![Immagine 3](/assets/images/projects/ras-laffan-villa/Bathroom playroom.jpg)
@@ -49,7 +50,7 @@ THIS ITS AN INTERIOR AND EXTERIOR DESIGN PROJECT MADE FOR A LUXURY BEACH VILLA A
 ![Immagine 32](/assets/images/projects/ras-laffan-villa/Salah 2.jpg)
 ![Immagine 33](/assets/images/projects/ras-laffan-villa/Salah.jpg)
 ![Immagine 34](/assets/images/projects/ras-laffan-villa/Sea front 2.jpg)
-![Immagine 35](/assets/images/projects/ras-laffan-villa/Sea front per copertina.jpg)
+![Immagine 35](/assets/images/projects/ras-laffan-villa/Sea_front_per_copertina.jpg)
 ![Immagine 36](/assets/images/projects/ras-laffan-villa/Side elevation.jpg)
 ![Immagine 37](/assets/images/projects/ras-laffan-villa/Sun light protection.jpg)
 ![Immagine 38](/assets/images/projects/ras-laffan-villa/Sun lignt protection 2.jpg)
