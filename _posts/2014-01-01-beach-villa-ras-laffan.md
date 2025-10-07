@@ -1,7 +1,7 @@
 ---
 title: "BEACH VILLA AT RAS LAFFAN - QATAR"
 layout: post
-post-image: "/assets/images/projects/ras-laffan-villa/Sea front per copertina.jpg"
+post-image: "/assets/images/projects/ras-laffan-villa/Sea\ front\ per\ copertina.jpg"
 description: "THIS ITS AN INTERIOR AND EXTERIOR DESIGN PROJECT MADE FOR A LUXURY BEACH VILLA AT RAS LAFFAN IN QATAR."
 tags:
   - qatar
