@@ -1,0 +1,40 @@
+<section class="section projects" id="progetti">
+    <p class="section__label">Progetti</p>
+    <h2 class="section__title">Lavori selezionati</h2>
+    <div class="mosaic" id="mosaic">
+        {% for post in site.posts %}
+        {% assign slug = post.url | split: '/' | last %}
+        <a class="mosaic__tile" href="{{ post.url | relative_url }}" id="{{ slug }}" data-slug="{{ slug }}"
+            aria-expanded="false" aria-controls="project-panel">
+            {% assign cover = post.post-image | remove_first: '/' %}
+            {% picture thumb {{ cover }} --alt {{ post.title }} %}
+            <span class="mosaic__label">
+                <span class="mosaic__title">{{ post.title }}</span>
+                <span class="mosaic__year">{{ post.date | date: "%Y" }}</span>
+            </span>
+        </a>
+        <template data-project="{{ slug }}">
+            <div class="panel__head">
+                <h3 class="panel__title">{{ post.title }}</h3>
+                <p class="panel__year">{{ post.date | date: "%Y" }}</p>
+            </div>
+            <div class="panel__prose">{{ post.content | project_prose | markdownify }}</div>
+            <div class="panel__gallery" tabindex="0">
+                {% assign imgs = post.content | gallery_images %}
+                {% for img in imgs %}
+                {% assign g = img | remove_first: '/' %}
+                {% picture gallery {{ g }} %}
+                {% endfor %}
+            </div>
+        </template>
+        {% endfor %}
+        <div class="mosaic__panel" id="project-panel" hidden>
+            <div class="panel__wrap">
+                <div class="panel__box">
+                    <button class="panel__close" type="button" aria-label="Chiudi progetto">&#215;</button>
+                    <div class="panel__inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

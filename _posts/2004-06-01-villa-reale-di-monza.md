@@ -1,7 +1,7 @@
 ---
 title: RESTAURO E RIQUALIFICAZIONE DELLA VILLA REALE DI MONZA
 layout: post
-post-image: "https://arch-cordero.github.io/assets/images/projects/monza/465370132.jpg"
+post-image: "/assets/images/projects/monza/465370132.jpg"
 description: Il progetto di restauro e riqualificazione della Villa Reale di Monza mira a valorizzare il patrimonio storico e architettonico, integrando nuove funzioni per garantire la sostenibilità e il rilancio culturale ed economico del complesso.
 tags:
   - villa reale monza

@@ -1,0 +1,18 @@
+# Immagini di sfondo della home (in ordine di rotazione).
+# Usa foto orizzontali ad alta risoluzione. `alt` descrive l'immagine.
+- image: /assets/images/projects/villa-marbella/fachada-nocturna.JPG
+  alt: "Villa a Marbella, facciata notturna"
+- image: /assets/images/projects/palazzina-tanaro/001.jpg
+  alt: "Palazzina Via Tanaro, Milano"
+- image: /assets/images/projects/villa-marbella/terraza.jpg
+  alt: "Villa a Marbella, terrazza in marmo"
+- image: /assets/images/projects/padiglione-alessandro-rosso/20150506_210118.jpg
+  alt: "Padiglione Alessandro Rosso, EXPO 2015"
+- image: /assets/images/projects/turkey-pavilion-expo-2015/EXPO-2015-RENDER_View01.jpg
+  alt: "Padiglione Turchia, EXPO 2015"
+- image: /assets/images/projects/lago-dorta/new-render-0.png
+  alt: "Villa sul Lago d'Orta"
+- image: /assets/images/projects/bar-500/03.jpg
+  alt: "Bar 500, restyling"
+- image: /assets/images/projects/ras-laffan-villa/Sea_front_per_copertina.jpg
+  alt: "Beach Villa, Ras Laffan"

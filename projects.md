@@ -1,5 +1,0 @@
----
-title: Progetti
-layout: projects
----
-

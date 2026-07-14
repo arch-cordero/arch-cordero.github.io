@@ -1,0 +1,205 @@
+.mosaic {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    grid-auto-flow: dense;
+    gap: 6px;
+}
+
+@media (min-width: 700px) {
+    .mosaic {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-auto-rows: 220px;
+    }
+}
+
+.mosaic__tile {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: var(--paper-dim);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s var(--ease);
+    }
+
+    &:hover img,
+    &:focus-visible img {
+        transform: scale(1.05);
+    }
+
+    // mosaic rhythm (a-elements only, so <template> siblings don't shift the pattern)
+    &:nth-of-type(8n + 1) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    &:nth-of-type(8n + 4) {
+        grid-column: span 2;
+    }
+
+    &:nth-of-type(8n + 7) {
+        grid-row: span 2;
+    }
+}
+
+.mosaic__label {
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: 1;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 2rem 0.85rem 0.7rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.35s var(--ease);
+}
+
+.mosaic__tile:hover .mosaic__label,
+.mosaic__tile:focus-visible .mosaic__label,
+.mosaic__tile[aria-expanded="true"] .mosaic__label {
+    opacity: 1;
+}
+
+@media (hover: none) {
+    .mosaic__label {
+        opacity: 1;
+        padding-top: 1.4rem;
+    }
+}
+
+.mosaic__title {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+}
+
+.mosaic__year {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    opacity: 0.8;
+}
+
+// ------- Expanded panel -------
+// The grid has fixed row tracks, so the panel reserves whole rows:
+// JS measures the content and sets --span = number of rows to occupy.
+.mosaic__panel {
+    grid-column: 1 / -1;
+    grid-row: span var(--span, 2);
+}
+
+.mosaic__panel[hidden] {
+    display: none;
+}
+
+.panel__wrap {
+    height: 100%; // fill the reserved rows so leftover space reads as panel background
+}
+
+.panel__box {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: var(--paper-dim);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.45s var(--ease), transform 0.45s var(--ease);
+}
+
+.mosaic__panel.is-open .panel__box {
+    opacity: 1;
+    transform: none;
+}
+
+.panel__inner {
+    padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.panel__close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.65rem;
+    z-index: 2;
+    font-size: 1.9rem;
+    font-weight: 300;
+    line-height: 1;
+    padding: 0.35rem 0.55rem;
+    color: var(--muted);
+    transition: color 0.2s;
+
+    &:hover,
+    &:focus-visible {
+        color: var(--ink);
+    }
+}
+
+.panel__head {
+    display: flex;
+    align-items: baseline;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding-right: 2.5rem;
+}
+
+.panel__title {
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    font-weight: 420;
+    letter-spacing: -0.01em;
+}
+
+.panel__year {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+}
+
+.panel__prose {
+    max-width: 68ch;
+    font-weight: 380;
+
+    p {
+        margin-bottom: 0.9em;
+    }
+
+    h3 {
+        display: none; // safety: any stray gallery heading
+    }
+}
+
+.panel__gallery {
+    display: flex;
+    gap: 8px;
+    margin-top: 1.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+
+    img {
+        height: min(55vh, 440px);
+        width: auto;
+        max-width: none;
+        scroll-snap-align: start;
+        background: #eceae8;
+    }
+
+    &:focus-visible {
+        outline: 1px solid var(--ink);
+        outline-offset: 4px;
+    }
+}
+
+@media (max-width: 700px) {
+    .panel__gallery img {
+        height: min(40vh, 320px);
+    }
+}

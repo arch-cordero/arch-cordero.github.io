@@ -1,0 +1,33 @@
+# jekyll_picture_tag presets (v2 schema) — https://rbuchberger.github.io/jekyll_picture_tag/
+media_queries:
+  mobile: "max-width: 700px"
+
+presets:
+  # Mosaic tiles on the home page
+  thumb:
+    widths: [320, 480, 720, 1000]
+    formats: [webp, original]
+    quality: 78
+    sizes:
+      mobile: "50vw"
+    size: "25vw"
+    attributes:
+      img: 'loading="lazy" decoding="async"'
+
+  # Expanded panel gallery + project pages
+  gallery:
+    widths: [600, 1000, 1600]
+    formats: [webp, original]
+    quality: 80
+    sizes:
+      mobile: "90vw"
+    size: "60vw"
+    attributes:
+      img: 'loading="lazy" decoding="async"'
+
+  # Full-viewport hero slides
+  hero:
+    widths: [800, 1400, 2200]
+    formats: [webp, original]
+    quality: 75
+    size: "100vw"

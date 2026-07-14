@@ -1,0 +1,107 @@
+// ------- Bio -------
+.bio__grid {
+    display: grid;
+    grid-template-columns: minmax(200px, 320px) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: start;
+}
+
+.bio__portrait img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: filter 0.6s var(--ease);
+
+    &:hover {
+        filter: grayscale(0);
+    }
+}
+
+.bio__text p {
+    max-width: 65ch;
+    color: var(--ink);
+    font-weight: 380;
+}
+
+@media (max-width: 700px) {
+    .bio__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bio__portrait {
+        max-width: 240px;
+    }
+}
+
+// ------- Contact -------
+.contact__links {
+    margin-top: 2.5rem;
+    max-width: 34rem;
+
+    li {
+        border-top: 1px solid var(--hairline);
+
+        &:last-child {
+            border-bottom: 1px solid var(--hairline);
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        padding: 1.1rem 0.25rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        transition: padding-left 0.25s var(--ease), color 0.25s;
+
+        &:hover,
+        &:focus-visible {
+            padding-left: 0.9rem;
+            color: var(--muted);
+        }
+    }
+}
+
+.contact__icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex: none;
+    fill: currentColor;
+
+    &--stroke {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+}
+
+// ------- Footer -------
+.site-footer {
+    border-top: 1px solid var(--hairline);
+    padding: 2.5rem var(--side) 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2.5rem;
+    align-items: baseline;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.site-footer__links {
+    display: flex;
+    gap: 1.5rem;
+
+    a:hover,
+    a:focus-visible {
+        color: var(--ink);
+    }
+}

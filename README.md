@@ -1,53 +1,66 @@
-# WhatATheme
-**WhatATheme** is a customizable Jekyll Portfolio theme which supports blogging. You can use this theme in order to create an elegant, fully responsive portfolio.
+# arch-cordero.github.io
 
-#### You can checkout the [**Demo Here**](https://thedevslot.github.io/WhatATheme/) :boom:
+Sito portfolio di **Fernando Cristobal Cordero**, architetto e designer — [arch-cordero.github.io](https://arch-cordero.github.io).
 
-![WhatATheme](assets/images/meta.jpg)
+Single-page minimale ispirato a [rpbw.com](https://www.rpbw.com/): hero a schermo intero con foto dei progetti in dissolvenza, breve bio, contatti e un mosaico di progetti che si espandono sul posto.
 
-# Features :sparkles:
-* Free and Easy setup
-* No Coding Required
-* Compatible with [Github Pages](https://pages.github.com/)
-* Responsive and Blogging Ready
-* HTML Compressor using [Jekyll Compress HTML](https://jch.penibelst.de/)
-* Minified CSS using SaSS
-* CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
-* Supports Latest [Jekyll 4.x](https://jekyllrb.com/) and [Bundler](https://bundler.io/)
-* Stylesheet built using SaSS
-* Comments using Disqus
-* Analytics using Google Analytics
-* Instant Search using [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search/)
+## Stack
 
-# Installation :books:
-### System Requirements
-* [Ruby](https://www.ruby-lang.org/en/)
-* [Jekyll](https://jekyllrb.com/)
-> You can read **What is Jekyll** [**here**](https://thedevslot.github.io/WhatATheme/blog/what-is-jekyll-how-to-use-it)
-### Up and Running
-* Fork the [Repository](https://github.com/thedevslot/WhatATheme/)
-* Clone or download the repository into directory of your choice: `git clone https://github.com/thedevslot/WhatATheme.git`
-* Inside the directory run `bundle install`
-* Host WhatATheme locally by running `bundle exec jekyll s`
+- [Jekyll 4](https://jekyllrb.com/) — build statico, deploy su GitHub Pages via Actions (`.github/workflows/jekyll.yml`)
+- [jekyll_picture_tag](https://rbuchberger.github.io/jekyll_picture_tag/) + [libvips](https://www.libvips.org/) — genera al build le versioni ridimensionate/WebP delle immagini (preset in `_data/picture.yml`, output in `_site/generated`, cache in CI)
+- CSS/JS scritti a mano (`_sass/`, `assets/js/main.js`), font [Inter](https://rsms.me/inter/) self-hosted — nessuna dipendenza esterna a runtime
+- `_plugins/project_gallery.rb` — filtri Liquid che estraggono dai post la descrizione e la galleria immagini
 
-> You can read **How to Install and use WhatATheme?** [**here**](https://thedevslot.github.io/WhatATheme/blog/how-to-install-whatatheme)
+## Sviluppo locale
 
-[<img src="https://i.imgur.com/TVI946Z.png" width="250" />](https://youtu.be/VfPa2c9kwhQ)
+Con Docker (consigliato — nessuna dipendenza sull'host):
 
----
+```sh
+docker compose up          # serve su http://localhost:4000 con livereload
+```
 
-### Content Credits :green_heart:
-* [Hero Image](https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) used as a background image in the very first section of Homepage.
-* [Author Image](https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png) used in the Author Section.
-* [Font Awesome](https://fontawesome.com/)
-* [Poppins Font](https://fonts.google.com/specimen/Poppins)
-* [Memphis Pattern](https://www.freepik.com/free-vector/memphis-pattern-background_4034913.htm#page=1&query=memphis%20pattern&position=23) used for some Social Media Images and the Favicon.
+Oppure nativamente:
 
----
+```sh
+sudo apt install ruby-full build-essential libvips-dev
+bundle config set --local path vendor/bundle
+bundle install
+bundle exec jekyll serve
+```
 
-### Credits :bulb:
-* [Sneha Omer](http://sassyecoder.github.io/)
-* [Harsh Trivedi](http://harsh98trivedi.github.io/)
+Il primo build genera migliaia di derivate immagine (qualche minuto); i successivi sono rapidi perché `_site/generated` viene conservato (`keep_files`).
 
-### License
-The contents of this repository are licensed under the [**GNU General Public License v2.0**](https://github.com/thedevslot/WhatATheme/blob/master/LICENSE)
+## Aggiungere un progetto
+
+1. Crea `_posts/AAAA-MM-GG-nome-progetto.md` (la data determina l'anno mostrato e l'ordinamento):
+
+   ```yaml
+   ---
+   title: "Titolo del progetto"
+   layout: post
+   post-image: "/assets/images/projects/nome-progetto/copertina.jpg"
+   description: "Breve descrizione (usata anche per SEO)."
+   tags:
+     - milano
+   ---
+
+   Testo di presentazione del progetto...
+
+   ---
+
+   ### GALLERIA IMMAGINI
+
+   ![Immagine 1](/assets/images/projects/nome-progetto/01.jpg)
+   ```
+
+2. Metti le foto in `assets/images/projects/nome-progetto/`.
+   **I nomi dei file non devono contenere spazi** (usa trattini).
+
+## Hero della home
+
+Le immagini di sfondo della home sono curate a mano in [`_data/hero.yml`](_data/hero.yml): una lista di `image:` + `alt:`. Usa foto orizzontali ad alta risoluzione (6–8 voci).
+
+## Note
+
+- Le immagini originali restano nel repository (~300 MB) e vengono servite solo nelle gallerie; hero e mosaico usano le derivate generate.
+- La cache CI delle derivate è legata all'hash di `assets/images/**` e `_data/picture.yml`: cambiando le immagini il primo build sarà più lento.

@@ -23,9 +23,9 @@ Il risultato è un bar dal design unico e riconoscibile, che si distingue all'in
 
 ### GALLERIA IMMAGINI
 ![Immagine 1](/assets/images/projects/bar-500/03.jpg)
-![Immagine 2](/assets/images/projects/bar-500/2017-09-04 11.17.11-1.jpg)
-![Immagine 3](/assets/images/projects/bar-500/2017-09-04 11.18.13.jpg)
-![Immagine 4](/assets/images/projects/bar-500/2017-09-04 11.18.38-1.jpg)
+![Immagine 2](/assets/images/projects/bar-500/2017-09-04-11.17.11-1.jpg)
+![Immagine 3](/assets/images/projects/bar-500/2017-09-04-11.18.13.jpg)
+![Immagine 4](/assets/images/projects/bar-500/2017-09-04-11.18.38-1.jpg)
 ![Immagine 5](/assets/images/projects/bar-500/IMG_20190106_170353.jpg)
 ![Immagine 6](/assets/images/projects/bar-500/IMG_20190106_170440.jpg)
 ![Immagine 7](/assets/images/projects/bar-500/IMG_20190106_170517.jpg)

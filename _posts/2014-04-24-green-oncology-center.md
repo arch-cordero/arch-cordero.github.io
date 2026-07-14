@@ -1,7 +1,7 @@
 ---
 title: MODELLO GLOBALE STANDARD DI CENTRO ONCOLOGICO
 layout: post
-post-image: "https://arch-cordero.github.io/assets/images/projects/goc/Area_3.jpg"
+post-image: "/assets/images/projects/goc/Area_3.jpg"
 description: Il Green Oncology Center (GOC) è un modello innovativo di centro oncologico sostenibile, adattabile ai paesi latinoamericani, che integra efficienza energetica, gestione ambientale e attività creative per migliorare le cure e il benessere dei pazienti.
 tags:
 - umberto veronesi

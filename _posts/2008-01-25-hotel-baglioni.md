@@ -1,7 +1,7 @@
 ---
 title: BAGLIONI HOTEL ABU DHABI - ARCHITETTURA SOSTENIBILE
 layout: post
-post-image: "https://arch-cordero.github.io/assets/images/projects/baglioni/baglioni_aerea.jpg"
+post-image: "/assets/images/projects/baglioni/baglioni_aerea.jpg"
 description: L'Hotel Baglioni ad Abu Dhabi è un esempio di architettura sostenibile che combina lusso e tecnologia avanzata per ridurre il consumo energetico, migliorando il comfort e l'efficienza delle sue strutture.
 tags:
   - architettura sostenibile

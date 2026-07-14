@@ -1,0 +1,24 @@
+<section class="hero" id="home" aria-label="{{ site.title }} — {{ site.description }}">
+    <div class="hero__slides">
+        {% for slide in site.data.hero %}
+        {% assign src = slide.image | remove_first: '/' %}
+        {% if forloop.first %}
+        <div class="hero__slide is-active">
+            {% picture hero {{ src }} --alt {{ slide.alt }} %}
+        </div>
+        {% else %}
+        <div class="hero__slide">
+            <template>{% picture hero {{ src }} --alt {{ slide.alt }} %}</template>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="hero__overlay">
+        <h1 class="hero__title">{{ site.title }}</h1>
+        <p class="hero__tagline">{{ site.description }}</p>
+    </div>
+    <a class="hero__scroll" href="#chi-sono" aria-label="Scorri verso il basso">
+        <span aria-hidden="true"></span>
+    </a>
+</section>
