@@ -19,12 +19,14 @@
                 <p class="panel__year">{{ post.date | date: "%Y" }}</p>
             </div>
             <div class="panel__prose">{{ post.content | project_prose | markdownify }}</div>
-            <div class="panel__gallery" tabindex="0">
-                {% assign imgs = post.content | gallery_images %}
-                {% for img in imgs %}
-                {% assign g = img | remove_first: '/' %}
-                {% picture gallery {{ g }} %}
-                {% endfor %}
+            <div class="panel__gallery" tabindex="0" role="group" aria-label="Galleria del progetto">
+                <div class="panel__gallery-track">
+                    {% assign imgs = post.content | gallery_images %}
+                    {% for img in imgs %}
+                    {% assign g = img | remove_first: '/' %}
+                    <div class="panel__gallery-slide">{% picture gallery {{ g }} %}</div>
+                    {% endfor %}
+                </div>
             </div>
         </template>
         {% endfor %}

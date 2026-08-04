@@ -12,6 +12,9 @@ layout: compress
     {{ content }}
   </main>
   {% include footer.html %}
+  <script defer src="{{ '/assets/js/vendor/embla-carousel.umd.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/vendor/embla-carousel-auto-scroll.umd.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/vendor/embla-carousel-wheel-gestures.umd.js' | relative_url }}"></script>
   <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 

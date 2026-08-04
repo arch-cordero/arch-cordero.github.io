@@ -22,6 +22,9 @@ presets:
     sizes:
       mobile: "90vw"
     size: "60vw"
+    # The carousel measures slide widths before the images load, so the
+    # intrinsic aspect ratio has to be in the markup.
+    dimension_attributes: true
     attributes:
       img: 'loading="lazy" decoding="async"'
 

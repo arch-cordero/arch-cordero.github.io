@@ -66,8 +66,63 @@
       panel.style.setProperty('--span', span);
     };
 
+    /* ---------- Panel gallery: slow auto-scroll ---------- */
+    // Embla Carousel + its AutoScroll plugin (vendored UMD builds).
+    // `stopOnInteraction` is the behaviour we want out of the box: the strip
+    // drifts on its own until the visitor drags/scrolls it, then stays put.
+    // All of that state lives in the instance, so tearing it down on close
+    // resets the behaviour for the next project.
+    var carousel = null;
+
+    var destroyGallery = function () {
+      if (!carousel) return;
+      carousel.destroy();
+      carousel = null;
+    };
+
+    var initGallery = function () {
+      var viewport = inner.querySelector('.panel__gallery');
+      if (!viewport || typeof window.EmblaCarousel !== 'function') return;
+
+      var plugins = [];
+      if (typeof window.EmblaCarouselWheelGestures === 'function') {
+        // Replays wheel/trackpad gestures as drags, so they scroll the strip
+        // (native scrolling is gone once Embla takes over) and count as
+        // interaction for the purposes of stopping the auto-scroll.
+        plugins.push(window.EmblaCarouselWheelGestures({ forceWheelAxis: 'x' }));
+      }
+      if (typeof window.EmblaCarouselAutoScroll === 'function') {
+        plugins.push(window.EmblaCarouselAutoScroll({
+          speed: 0.6,
+          startDelay: 1500,
+          playOnInit: !reducedMotion,
+          stopOnInteraction: true,
+          stopOnMouseEnter: false
+        }));
+      }
+
+      viewport.classList.add('is-live');
+      carousel = window.EmblaCarousel(
+        viewport,
+        { loop: true, dragFree: true, containScroll: false, align: 'start' },
+        plugins
+      );
+
+      // Embla replaces the native scroller, so re-add keyboard panning.
+      viewport.addEventListener('keydown', function (event) {
+        if (!carousel) return;
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+        event.preventDefault();
+        var autoScroll = carousel.plugins().autoScroll;
+        if (autoScroll) autoScroll.stop();
+        if (event.key === 'ArrowRight') carousel.scrollNext();
+        else carousel.scrollPrev();
+      });
+    };
+
     var closePanel = function (restoreFocus) {
       if (!openTile) return;
+      destroyGallery();
       panel.classList.remove('is-open');
       panel.hidden = true;
       inner.innerHTML = '';
@@ -96,6 +151,7 @@
       tile.after(panel);
       panel.hidden = false;
       updateSpan();
+      initGallery();
 
       if ('ResizeObserver' in window) {
         resizeObserver = new ResizeObserver(updateSpan);
