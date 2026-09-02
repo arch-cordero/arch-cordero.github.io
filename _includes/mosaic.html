@@ -10,13 +10,14 @@
             {% picture thumb {{ cover }} --alt {{ post.title }} %}
             <span class="mosaic__label">
                 <span class="mosaic__title">{{ post.title }}</span>
-                <span class="mosaic__year">{{ post.date | date: "%Y" }}</span>
+                {% comment %}Date nascoste{% endcomment %}
+                {% comment %}<span class="mosaic__year">{{ post.date | date: "%Y" }}</span>{% endcomment %}
             </span>
         </a>
         <template data-project="{{ slug }}">
             <div class="panel__head">
                 <h3 class="panel__title">{{ post.title }}</h3>
-                <p class="panel__year">{{ post.date | date: "%Y" }}</p>
+                {% comment %}<p class="panel__year">{{ post.date | date: "%Y" }}</p>{% endcomment %}
             </div>
             <div class="panel__prose">{{ post.content | project_prose | markdownify }}</div>
             <div class="panel__gallery" tabindex="0" role="group" aria-label="Galleria del progetto">
