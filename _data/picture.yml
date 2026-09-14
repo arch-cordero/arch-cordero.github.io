@@ -4,13 +4,21 @@ media_queries:
 
 presets:
   # Mosaic tiles on the home page
+  # Tiles are square or span two rows and object-fit: cover, so a landscape
+  # image has to fill the tile's height, not its width. The browser picks a
+  # candidate by width alone, so the size hint overstates the tile width to
+  # leave enough pixels for the crop.
   thumb:
-    widths: [320, 480, 720, 1000]
+    widths: [480, 720, 1000, 1400, 2000]
     formats: [webp, original]
-    quality: 78
+    quality: 85
+    # jekyll_picture_tag defaults WebP to quality 50 and that default wins
+    # over `quality`, so every preset has to set it explicitly.
+    format_quality:
+      webp: 85
     sizes:
-      mobile: "50vw"
-    size: "25vw"
+      mobile: "100vw"
+    size: "40vw"
     attributes:
       img: 'loading="lazy" decoding="async"'
 
@@ -19,6 +27,8 @@ presets:
     widths: [600, 1000, 1600]
     formats: [webp, original]
     quality: 80
+    format_quality:
+      webp: 80
     sizes:
       mobile: "90vw"
     size: "60vw"
@@ -33,4 +43,6 @@ presets:
     widths: [800, 1400, 2200]
     formats: [webp, original]
     quality: 75
+    format_quality:
+      webp: 75
     size: "100vw"
