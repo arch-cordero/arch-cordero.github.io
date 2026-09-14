@@ -33,6 +33,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # jekyll-last-modified-at reads each file's last commit date, so the
+          # full history has to be present. With the default shallow clone every
+          # page would report the timestamp of the single fetched commit.
+          fetch-depth: 0
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4

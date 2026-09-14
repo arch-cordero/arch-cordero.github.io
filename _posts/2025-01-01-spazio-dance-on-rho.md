@@ -2,6 +2,7 @@
 title: "Spazio Dance On, Rho"
 layout: post
 post-image: "/assets/images/projects/spazio-dance-on-rho/sala-danza-barre.jpg"
+location: "Rho, Milano, Italia"
 description: "Progetto di architettura e interior design per Spazio Dance On, scuola di danza e studio pilates in Via Alcide De Gasperi a Rho. L'intervento riconverte un immobile esistente in due sale danza, uno studio pilates attrezzato, spogliatoi e accoglienza; allo studio è stata affidata anche la CILA e la pratica edilizia con il Comune di Rho."
 tags:
   - rho

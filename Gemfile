@@ -8,5 +8,6 @@ gem "ruby-vips"
 group :jekyll_plugins do
   gem "jekyll_picture_tag", "~> 2.1"
   gem "jekyll-sitemap"
+  gem "jekyll-last-modified-at", "~> 1.3"
   gem "jekyll-admin", "0.9.0"
 end

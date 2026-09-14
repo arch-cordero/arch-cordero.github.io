@@ -38,11 +38,17 @@
   "description": {{ page-description | jsonify }},
   "image": {{ page-image | absolute_url | jsonify }},
   "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  {% if page.last_modified_at %}"dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},{% endif %}
   "inLanguage": "it",
   "articleSection": "Architettura",
   {% if page.tags and page.tags != empty %}"keywords": {{ page.tags | join: ", " | jsonify }},{% endif %}
+  {% if page.location and page.location != "" %}"locationCreated": {
+    "@type": "Place",
+    "name": {{ page.location | jsonify }}
+  },{% endif %}
   "author": {
     "@type": "Person",
+    "@id": "{{ site.url }}/#person",
     "name": {{ site.author-name | jsonify }},
     "url": {{ site.url | jsonify }}
   }
@@ -53,6 +59,16 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+    {% assign newest = site.posts | first %}{
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": {{ site.url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "inLanguage": "it",
+      "about": { "@id": "{{ site.url }}/#person" },
+      "publisher": { "@id": "{{ site.url }}/#person" }{% if newest.last_modified_at %},
+      "dateModified": {{ newest.last_modified_at | date_to_xmlschema | jsonify }}{% endif %}
+    },
     {
       "@type": "Person",
       "@id": "{{ site.url }}/#person",
@@ -62,6 +78,15 @@
       "image": {{ site.author-image | absolute_url | jsonify }},
       "email": "mailto:{{ site.email }}",
       "url": {{ site.url | jsonify }},
+      "workLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Milano",
+          "addressRegion": "Lombardia",
+          "addressCountry": "IT"
+        }
+      },
       "knowsAbout": [
         "Progettazione architettonica",
         "Ristrutturazione",
@@ -87,7 +112,11 @@
       "image": {{ site.site-image | absolute_url | jsonify }},
       "email": "mailto:{{ site.email }}",
       "founder": { "@id": "{{ site.url }}/#person" },
-      "areaServed": { "@type": "Country", "name": "Italia" },
+      "areaServed": [
+        { "@type": "City", "name": "Milano" },
+        { "@type": "AdministrativeArea", "name": "Lombardia" },
+        { "@type": "Country", "name": "Italia" }
+      ],
       "knowsAbout": [
         "Architettura residenziale",
         "Architettura commerciale",

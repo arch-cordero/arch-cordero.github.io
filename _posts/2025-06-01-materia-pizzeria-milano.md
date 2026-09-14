@@ -2,6 +2,7 @@
 title: "Materia Pizzeria, Milano"
 layout: post
 post-image: "/assets/images/projects/materia-pizzeria-milano/sala-pannelli.jpg"
+location: "Milano, Italia"
 description: "Progetto di architettura e interior design per Materia – Le Origini del Gusto, pizzeria e degustazione in Via del Torchio, nel centro di Milano. Il locale traduce in materia costruita il racconto gastronomico del cliente: intonaci decorativi, cuoio, metallo brunito e cementine compongono un ambiente caldo e contemporaneo dalle radici lucane."
 tags:
   - milano
