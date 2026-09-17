@@ -205,12 +205,16 @@
 }
 
 .panel__gallery-slide {
+    // The strip's only size knob: slides share a height and each image keeps
+    // its own aspect ratio, so widths follow from the photo, never a crop.
+    --slide-height: min(65vh, 520px);
+
     flex: 0 0 auto;
     min-width: 0;
 
     img {
         display: block;
-        height: min(55vh, 440px);
+        height: var(--slide-height);
         width: auto;
         max-width: none;
         background: #eceae8;
@@ -220,7 +224,7 @@
 }
 
 @media (max-width: 700px) {
-    .panel__gallery-slide img {
-        height: min(40vh, 320px);
+    .panel__gallery-slide {
+        --slide-height: min(47vh, 380px);
     }
 }
