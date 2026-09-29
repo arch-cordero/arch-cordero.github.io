@@ -1,7 +1,7 @@
 ---
 title: "CAPPELLA SAN GIUSEPPE - MILANO"
 layout: post
-post-image: "/assets/images/projects/cappella-san-giuseppe/1465867835.jpg"
+post-image: "/assets/images/projects/cappella-san-giuseppe/1943746157.jpg"
 description: "La cappella di San Giuseppe, proprietà delle Opere Diocesane di Milano, è sita in via Copernico, all'interno di una serie di edifici scolastici."
 tags:
   - cappella
