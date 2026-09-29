@@ -6,3 +6,4 @@ layout: default
 {% include bio.html %}
 {% include contact.html %}
 {% include mosaic.html %}
+{% include press.html %}

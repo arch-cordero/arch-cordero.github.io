@@ -46,3 +46,16 @@ presets:
     format_quality:
       webp: 75
     size: "100vw"
+
+  # Press cards (home page, "Stampa")
+  press:
+    widths: [480, 800, 1200]
+    formats: [webp, original]
+    quality: 80
+    format_quality:
+      webp: 80
+    sizes:
+      mobile: "100vw"
+    size: "34vw"
+    attributes:
+      img: 'loading="lazy" decoding="async"'

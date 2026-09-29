@@ -1,0 +1,37 @@
+<section class="section press" id="stampa">
+    <p class="section__label">Stampa</p>
+    <h2 class="section__title">Articoli e citazioni</h2>
+    <ul class="press__grid">
+        {% for item in site.data.press %}
+        <li>
+            <a class="press-card" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
+                <div class="press-card__media{% unless item.image %} press-card__media--text{% endunless %}">
+                    {% if item.image %}
+                    {% assign src = item.image | remove_first: '/' %}
+                    <div class="press-card__img"{% if item.focus %} style="--focus: {{ item.focus }}"{% endif %}>
+                        {% picture press {{ src }} --alt {{ item.alt }} %}
+                    </div>
+                    {% if item.credit %}<small class="press-card__credit">{{ item.credit }}</small>{% endif %}
+                    {% elsif item.quote %}
+                    <blockquote class="press-card__quote">{{ item.quote }}</blockquote>
+                    {% elsif item.figure %}
+                    <p class="press-card__figure">
+                        {% if item.figure_label %}<span>{{ item.figure_label }}</span>{% endif %}
+                        {{ item.figure }}
+                    </p>
+                    {% endif %}
+                </div>
+                <div class="press-card__body">
+                    <p class="press-card__meta">
+                        <span class="press-card__source">{{ item.source }}</span>
+                        <span>{% if item.date %}<time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%Y" }}</time> · {% endif %}{{ item.kind }}</span>
+                    </p>
+                    <h3 class="press-card__title">{{ item.title }}</h3>
+                    {% if item.excerpt %}<p class="press-card__excerpt">{{ item.excerpt }}</p>{% endif %}
+                    <span class="press-card__cta">{{ item.cta | default: "Leggi l'articolo" }}<span aria-hidden="true">&#8599;</span></span>
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

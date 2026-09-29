@@ -1,0 +1,67 @@
+# Rassegna stampa (in ordine di visualizzazione).
+#
+# Campi:
+#   url      link all'articolo (obbligatorio)
+#   source   testata o sito
+#   date     data di pubblicazione (AAAA-MM-GG), facoltativa
+#   kind     tipo di contenuto: Articolo, Intervista, Atti di gara...
+#   title    titolo dell'articolo
+#   excerpt  una o due righe che spiegano dove compare l'architetto
+#   image    anteprima salvata in /assets/images/press/ (facoltativa)
+#   alt      descrizione dell'immagine
+#   focus    punto da tenere a fuoco nel ritaglio, es. "50% 20%" (facoltativo)
+#   credit   crediti della foto, se la licenza li richiede (facoltativo)
+#   quote    citazione mostrata al posto dell'immagine, se manca `image`
+#   figure   in alternativa, un numero o una parola in grande (con `figure_label`)
+#   cta      testo del link (predefinito: "Leggi l'articolo")
+
+- url: https://www.terzovalico.it/area-trasparenza.html
+  source: Terzo Valico dei Giovi
+  kind: Atti di gara
+  title: Commissione giudicatrice, tratta AV/AC Terzo Valico dei Giovi
+  excerpt: "Membro della Commissione giudicatrice per il lotto Interconnessione di Voltri e completamento Polcevera e per l'Interconnessione di Novi Ligure."
+  image: /assets/images/press/terzo-valico.jpg
+  alt: "Fresa meccanica della galleria, circondata dal bosco"
+  cta: Vedi gli atti
+
+- url: https://www.thebrief.city/stories/dal-townhouse-duomo-a-expo-e-il-networking-la-carta-vincente-di-alessandro-rosso/
+  source: thebrief
+  date: 2015-03-15
+  kind: Intervista
+  title: "Dal TownHouse Duomo a Expo. È il «networking» la carta vincente di Alessandro Rosso"
+  excerpt: "Intervista all'architetto Fernando Cristobal Cordero sui padiglioni di Cina, Kuwait e Turchia a Expo 2015."
+  image: /assets/images/press/thebrief-expo.jpg
+  alt: "Fernando Cristobal Cordero durante l'intervista"
+  focus: "50% 25%"
+
+- url: https://www.ilgiornale.it/news/i-tre-grattacieli-city-life-saranno-simbolo-nel-mondo.html
+  source: il Giornale
+  date: 2006-02-27
+  kind: Articolo
+  title: "«I tre grattacieli di City Life saranno un simbolo nel mondo»"
+  excerpt: "L'architetto urbanista Fernando Cristobal Cordero sui progetti di City Life e Santa Giulia a Milano."
+  # https://commons.wikimedia.org/wiki/File:Tre_Torri,_Milan,_Italy_Apr_14,_2023_07-56-42_PM.jpeg
+  image: /assets/images/press/ilgiornale-city-life.jpg
+  alt: "Le tre torri di CityLife a Milano"
+  focus: "50% 40%"
+  credit: "Foto KaiKemmann, CC BY-SA 4.0, via Wikimedia Commons"
+
+- url: https://it.everybodywiki.com/Fernando_Cristobal_Cordero
+  source: EverybodyWiki
+  kind: Biografia
+  title: Fernando Cristobal Cordero
+  excerpt: "La formazione con Tomás Maldonado, il Green Oncology Center per Umberto Veronesi e i progetti ad Abu Dhabi."
+  image: /assets/images/press/everybodywiki-veronesi.jpg
+  alt: "Fernando Cristobal Cordero con il professor Umberto Veronesi"
+  focus: "50% 18%"
+  cta: Leggi la biografia
+
+- url: https://www.ordinearchitetti.mi.it/it/ordine/albo/scheda/-94248877-fernando-cordero
+  source: Ordine degli Architetti di Milano
+  date: 1992-04-08
+  kind: Albo
+  title: Albo degli Architetti P.P.C. della Provincia di Milano
+  excerpt: "Scheda di iscrizione all'Albo, sezione A, architetto. Laurea e abilitazione a Milano nel 1991."
+  figure: "7434"
+  figure_label: Matricola
+  cta: Vedi la scheda
