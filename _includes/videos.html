@@ -1,0 +1,29 @@
+<section class="section videos" id="video">
+    <p class="section__label">Video</p>
+    <h2 class="section__title">Progetti in video</h2>
+    <ul class="videos__grid">
+        {% for item in site.data.videos %}
+        {% assign watch = "https://www.youtube.com/watch?v=" | append: item.id %}
+        <li class="video-card">
+            {% comment %}An inline background-image stops lite-youtube from fetching its own poster from YouTube.{% endcomment %}
+            <lite-youtube class="video-card__player" videoid="{{ item.id }}" params="rel=0" style="background-image: none">
+                {% assign src = item.poster | remove_first: '/' %}
+                <div class="video-card__poster"{% if item.focus %} style="--focus: {{ item.focus }}"{% endif %}>
+                    {% picture video {{ src }} %}
+                </div>
+                <a class="lyt-playbtn" href="{{ watch }}" target="_blank" rel="noopener noreferrer">
+                    <span class="lyt-visually-hidden">Guarda il video: {{ item.title }}</span>
+                </a>
+            </lite-youtube>
+            <div class="video-card__body">
+                <p class="video-card__meta">
+                    <span class="video-card__source">{{ item.source }}</span>
+                    <span><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%Y" }}</time> · {{ item.duration }}</span>
+                </p>
+                <h3 class="video-card__title">{{ item.title }}</h3>
+                <a class="video-card__cta" href="{{ watch }}" target="_blank" rel="noopener noreferrer">Guarda su YouTube<span aria-hidden="true">&#8599;</span></a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

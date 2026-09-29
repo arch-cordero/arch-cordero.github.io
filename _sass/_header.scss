@@ -23,9 +23,11 @@
 
 .site-header__nav {
     display: flex;
-    gap: clamp(0.9rem, 3vw, 2.25rem);
+    flex-wrap: wrap;
+    gap: 0.3rem clamp(0.9rem, 3vw, 2.25rem);
 
     a {
+        white-space: nowrap;
         font-size: 0.7rem;
         font-weight: 500;
         letter-spacing: 0.18em;

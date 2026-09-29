@@ -7,3 +7,4 @@ layout: default
 {% include contact.html %}
 {% include mosaic.html %}
 {% include press.html %}
+{% include videos.html %}

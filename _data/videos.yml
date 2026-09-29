@@ -1,0 +1,40 @@
+# Video (in ordine di visualizzazione).
+#
+# Campi:
+#   id        ID del video YouTube, es. "CTkspQAlsD8" da youtube.com/watch?v=CTkspQAlsD8
+#   source    canale che ha pubblicato il video
+#   date      data di pubblicazione (AAAA-MM-GG)
+#   duration  durata, es. "2:36"
+#   title     titolo del video
+#   poster    anteprima salvata in /assets/images/videos/ (da i.ytimg.com/vi/<id>/…),
+#             ritagliata in 16:9 senza le bande nere
+#   focus     punto da tenere a fuoco nel ritaglio 16:9, es. "50% 30%" (facoltativo)
+
+- id: CTkspQAlsD8
+  source: Webuild
+  date: 2022-12-04
+  duration: "2:36"
+  title: Terzo Valico dei Giovi e Nodo di Genova
+  poster: /assets/images/videos/terzo-valico.jpg
+
+- id: 7vS7DU9LlQg
+  source: Fernando Cristobal Cordero
+  date: 2009-09-26
+  duration: "10:01"
+  title: Milano cambia per l'Europa
+  poster: /assets/images/videos/milano-cambia-per-l-europa.jpg
+  focus: "50% 30%"
+
+- id: 0xFYI0U1Rcw
+  source: Fernando Cristobal Cordero
+  date: 2009-07-21
+  duration: "4:02"
+  title: Recupero e valorizzazione della Villa Reale di Monza
+  poster: /assets/images/videos/villa-reale-monza.jpg
+
+- id: xY1cdXugyVQ
+  source: Fernando Cristobal Cordero
+  date: 2013-07-13
+  duration: "4:27"
+  title: Il Vangelo di Aldo Carpi, Museo Diocesano di Milano
+  poster: /assets/images/videos/vangelo-aldo-carpi.jpg

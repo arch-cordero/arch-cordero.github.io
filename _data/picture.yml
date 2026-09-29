@@ -59,3 +59,18 @@ presets:
     size: "34vw"
     attributes:
       img: 'loading="lazy" decoding="async"'
+
+  # Video posters (home page, "Video"). The sources are YouTube thumbnails,
+  # 480–1280px wide; widths above a source's own are skipped.
+  video:
+    widths: [480, 800, 1280]
+    formats: [webp, original]
+    quality: 80
+    format_quality:
+      webp: 80
+    sizes:
+      mobile: "100vw"
+    size: "46vw"
+    # Decorative: the play button carries the video title.
+    attributes:
+      img: 'loading="lazy" decoding="async" alt=""'
