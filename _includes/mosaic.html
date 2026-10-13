@@ -4,7 +4,7 @@
     <div class="mosaic" id="mosaic">
         {% for post in site.posts %}
         {% assign slug = post.url | split: '/' | last %}
-        <a class="mosaic__tile" href="{{ post.url | relative_url }}" id="{{ slug }}" data-slug="{{ slug }}"
+        <a class="mosaic__tile{% if post.featured %} mosaic__tile--featured{% endif %}" href="{{ post.url | relative_url }}" id="{{ slug }}" data-slug="{{ slug }}"
             aria-expanded="false" aria-controls="project-panel">
             {% assign cover = post.post-image | remove_first: '/' %}
             {% picture thumb {{ cover }} --alt {{ post.title }} %}

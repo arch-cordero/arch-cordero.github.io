@@ -1,6 +1,7 @@
 ---
 title: "EXPO 2015 - Project Manager Padiglione Turchia"
 layout: post
+featured: true
 post-image: "/assets/images/projects/turkey-pavilion-expo-2015/EXPO-2015-RENDER_View01.jpg"
 description: "L'architetto Fernando Cristobal Cordero ha ricoperto il ruolo di Project Manager per la realizzazione del Padiglione della Turchia a EXPO 2015. La sua gestione ha assicurato il completamento di una struttura complessa che fondeva design moderno e tradizione, simbolicamente rappresentata dal melograno."
 tags:

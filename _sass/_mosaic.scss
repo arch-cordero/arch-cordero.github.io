@@ -45,6 +45,12 @@
     &:nth-of-type(8n + 7) {
         grid-row: span 2;
     }
+
+    // `featured: true` in a post's front matter always gets the big tile
+    &.mosaic__tile--featured {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
 }
 
 .mosaic__label {
